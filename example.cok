@@ -1,3 +1,4 @@
+import "stdio.h"
 fn main() int {
-    int leet = 1337
+    printf("hello world!")
 }

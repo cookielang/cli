@@ -25,16 +25,15 @@ async function run() {
     }
     const codegen = new CCodeGenPass();
     const output = nodes
-        .filter((node) => node.type == NodeType.FUNCTION)
         .map((node) => {
-            codegen.visitFunction(<Function>node);
+            codegen.visitTopLevel(node);
             return codegen.valueStack.pop();
         })
         .join("\n");
     await writeFile(fn + ".tmp.c", output);
     try {
         await exec(
-            `gcc -Wall -Wextra -Werror -O2 -std=c99 -pedantic -o ${fn} ${fn}.tmp.c`
+            `gcc -Wall -Wextra -Werror -O2 -std=c99 -pedantic -o ${fn.replace(".cok", "")} ${fn}.tmp.c`
         );
     } catch (err) {
         panic(err.toString());

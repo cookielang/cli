@@ -2213,7 +2213,7 @@ levn@~0.3.0:
 
 libcookielang@cookielang/cookielang:
   version "1.0.0"
-  resolved "https://codeload.github.com/cookielang/cookielang/tar.gz/6e049b6d7d356fd6ed8e631f83f0071ea5766a37"
+  resolved "https://codeload.github.com/cookielang/cookielang/tar.gz/a3c2722768c96382f57d177566db632db3598850"
   dependencies:
     "@types/jest" "^24.0.23"
     "@types/node" "^12.7.12"
