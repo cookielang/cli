@@ -15,7 +15,8 @@
     "yargs": "^15.0.2"
   },
   "scripts": {
-    "start": "ts-node src"
+    "start": "ts-node src",
+    "postinstall": "tsc"
   },
   "bin": "cli.js"
 }
